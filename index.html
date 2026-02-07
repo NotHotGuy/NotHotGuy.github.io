@@ -15,24 +15,28 @@
             background-color: #080808;
             color: #ccff00;
             font-family: 'Courier New', monospace;
-            overflow: hidden;
-            height: 100vh;
-            width: 100vw;
+            overflow-y: auto;
+            height: auto;
+            min-height: 100vh;
+            width: 100%;
             cursor: crosshair;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
         }
 
-        /* Asymmetric Hero Background */
+        /* Asymmetric Hero Background (now a parallax layer) */
         .hero-text {
-            position: fixed;
-            top: 15%;
+            position: absolute;
+            top: 12%;
             left: -5%;
             font-size: 20vw;
             font-weight: 900;
             letter-spacing: -0.02em;
-            z-index: 50;
+            z-index: 10;
             pointer-events: none;
             text-shadow: 0 0 40px rgba(204, 255, 0, 0.2);
             mix-blend-mode: screen;
+            will-change: transform;
         }
 
         .hero-text span {
@@ -41,6 +45,13 @@
             color: transparent;
             line-height: 0.9;
         }
+
+        /* Parallax scene and layers */
+        .scene{position:relative;min-height:100vh;overflow:visible}
+        .layer{position:absolute;inset:0;pointer-events:none;will-change:transform}
+        .layer.mid{pointer-events:auto;z-index:20}
+        .layer.bg{z-index:5}
+        .layer.fg{z-index:40}
 
         /* Scattered Collage Container */
         .gallery {
@@ -218,27 +229,38 @@
     </style>
 </head>
 <body>
-    <!-- Asymmetric Hero Background -->
-    <div class="hero-text">
-        <span>ANTICS</span>
-    </div>
+    <!-- Parallax-scrolling Scenery (wrapped for infinite-scroll looping) -->
+    <div id="scrollViewport">
+        <div id="loop">
+            <section class="scene">
+                <div class="layer bg" data-speed="0.18">
+                    <div class="hero-text"><span>ANTICS</span></div>
+                </div>
 
-    <!-- Scattered Collage Gallery -->
-    <div class="gallery">
-        <div class="image-item image-1">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=500&fit=crop" alt="Portfolio image 1">
-        </div>
-        <div class="image-item image-2">
-            <img src="https://images.unsplash.com/photo-1606986628025-35d57e735ae0?w=400&h=600&fit=crop" alt="Portfolio image 2">
-        </div>
-        <div class="image-item image-3">
-            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&h=400&fit=crop" alt="Portfolio image 3">
-        </div>
-        <div class="image-item image-4">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=500&fit=crop" alt="Portfolio image 4">
-        </div>
-        <div class="image-item image-5">
-            <img src="https://images.unsplash.com/photo-1574158622282-cd922ab0f2a4?w=500&h=450&fit=crop" alt="Portfolio image 5">
+                <div class="layer mid" data-speed="0.45">
+                    <div class="gallery">
+                        <div class="image-item image-1">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=500&fit=crop" alt="Portfolio image 1">
+                        </div>
+                        <div class="image-item image-2">
+                            <img src="https://images.unsplash.com/photo-1606986628025-35d57e735ae0?w=400&h=600&fit=crop" alt="Portfolio image 2">
+                        </div>
+                        <div class="image-item image-3">
+                            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&h=400&fit=crop" alt="Portfolio image 3">
+                        </div>
+                        <div class="image-item image-4">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=500&fit=crop" alt="Portfolio image 4">
+                        </div>
+                        <div class="image-item image-5">
+                            <img src="https://images.unsplash.com/photo-1574158622282-cd922ab0f2a4?w=500&h=450&fit=crop" alt="Portfolio image 5">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layer fg" data-speed="0.85">
+                    <!-- optional foreground accents could go here -->
+                </div>
+            </section>
         </div>
     </div>
 
@@ -250,33 +272,76 @@
     <nav class="nav-bottom-right">CV</nav>
 
     <script>
-        // Custom cursor tracking with mix-blend-mode effect
-        document.addEventListener('mousemove', function(e) {
-            const cursor = document.querySelector('body::before');
-            if (cursor) {
-                document.documentElement.style.setProperty('--cursor-x', e.clientX + 'px');
-                document.documentElement.style.setProperty('--cursor-y', e.clientY + 'px');
-            }
-        });
-
-        // Add click interactions to navigation
+        // Navigation click logging (keep lightweight)
         document.querySelectorAll('nav').forEach(nav => {
             nav.addEventListener('click', function() {
-                console.log('Navigating to:', this.textContent);
+                console.log('Navigating to:', this.textContent.trim());
             });
         });
 
-        // Optional: Add parallax effect to images on scroll
-        const imageItems = document.querySelectorAll('.image-item');
-        document.addEventListener('mousemove', function(e) {
-            const x = (e.clientX / window.innerWidth) - 0.5;
-            const y = (e.clientY / window.innerHeight) - 0.5;
+        // Infinite scroll loop with parallax layers
+        (function() {
+            const loop = document.getElementById('loop');
+            if (!loop) return;
 
-            imageItems.forEach((item, index) => {
-                const move = (index + 1) * 0.5;
-                item.style.transform += ` translateX(${x * move}px) translateY(${y * move}px)`;
-            });
-        });
+            // duplicate children to create continuous content
+            function duplicate() {
+                const original = Array.from(loop.children);
+                original.forEach(node => loop.appendChild(node.cloneNode(true)));
+            }
+
+            // Parallax update using requestAnimationFrame
+            let layers = [];
+            let ticking = false;
+
+            function updateParallax() {
+                const y = window.scrollY;
+                layers.forEach(layer => {
+                    const speed = parseFloat(layer.dataset.speed) || 0.5;
+                    // translate in opposite direction to create depth
+                    const t = - (y * speed);
+                    layer.style.transform = `translate3d(0, ${t}px, 0)`;
+                });
+                ticking = false;
+            }
+
+            function onScroll() {
+                if (!ticking) {
+                    requestAnimationFrame(updateParallax);
+                    ticking = true;
+                }
+            }
+
+            function setupLoop() {
+                duplicate();
+                layers = document.querySelectorAll('.scene .layer');
+
+                // keep parallax in sync on scroll
+                window.addEventListener('scroll', function() {
+                    onScroll();
+                    // handle jump wrapping to keep scroll continuous
+                    const half = loop.scrollHeight / 2;
+                    if (window.scrollY >= half) {
+                        window.scrollTo(0, window.scrollY - half);
+                    } else if (window.scrollY <= 0) {
+                        window.scrollTo(0, window.scrollY + half);
+                    }
+                }, {passive: true});
+
+                // initial call
+                updateParallax();
+
+                // recompute on resize
+                window.addEventListener('resize', function() {
+                    setTimeout(updateParallax, 80);
+                });
+
+                // start near top (small offset) so loop logic has room
+                setTimeout(function(){ window.scrollTo(0, 1); }, 60);
+            }
+
+            requestAnimationFrame(setupLoop);
+        })();
     </script>
 </body>
 </html>
