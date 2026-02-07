@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works - ANTICS Photography</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Courier New', monospace;
+            padding: 40px 20px;
+        }
+
+        .header {
+            max-width: 1200px;
+            margin: 0 auto 50px;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #ccff00;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #ccff00;
+            padding-bottom: 4px;
+        }
+
+        .back-link:hover {
+            box-shadow: 0 0 10px rgba(204, 255, 0, 0.5);
+        }
+
+        .title {
+            font-size: 42px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            -webkit-text-stroke: 1px #ccff00;
+            color: transparent;
+        }
+
+        .search-container {
+            max-width: 1200px;
+            margin: 0 auto 60px;
+        }
+
+        .search-input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #444;
+            color: #ffffff;
+            font-size: 18px;
+            padding: 12px 0;
+            font-family: 'Courier New', monospace;
+            outline: none;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .search-input::placeholder {
+            color: #666;
+        }
+
+        .search-input:focus {
+            border-bottom-color: #ccff00;
+            box-shadow: 0 0 15px rgba(204, 255, 0, 0.4);
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1;
+            border: 1px solid #333;
+            group: "item";
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            border-color: #ccff00;
+            box-shadow: 0 0 20px rgba(204, 255, 0, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.4s ease;
+            filter: brightness(0.9);
+        }
+
+        .gallery-item:hover img {
+            filter: brightness(1.1) contrast(1.1);
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(8, 8, 8, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ccff00;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .gallery-date {
+            font-size: 12px;
+            color: #999;
+            letter-spacing: 1px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        .result-count {
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation styling */
+        nav {
+            position: fixed;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            z-index: 100;
+            cursor: pointer;
+            border: 1px solid #444;
+            padding: 12px 16px;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(4px);
+            transition: all 0.2s ease;
+            top: 20px;
+            right: 20px;
+        }
+
+        nav:hover {
+            color: #0a0a0a;
+            background: #ccff00;
+            box-shadow: 0 0 20px #ccff00;
+            border-color: #ccff00;
+        }
+
+        nav a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 28px;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav><a href="index.html">← HOME</a></nav>
+
+    <!-- Header -->
+    <div class="header">
+        <h1 class="title">WORKS</h1>
+    </div>
+
+    <!-- Search Container -->
+    <div class="search-container">
+        <input 
+            type="text" 
+            class="search-input" 
+            id="searchInput" 
+            placeholder="Search by title, keywords, or date (YYYY-MM-DD)..."
+        >
+        <div class="result-count" id="resultCount"></div>
+    </div>
+
+    <!-- Gallery Container -->
+    <div class="gallery-container">
+        <div class="gallery" id="gallery"></div>
+        <div class="no-results" id="noResults" style="display: none;">
+            No photos match your search.
+        </div>
+    </div>
+
+    <script>
+        // Photography Data Index
+        const photographyData = [
+            {
+                src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=500&fit=crop",
+                title: "Mountain Serenity",
+                keywords: ["nature", "mountains", "landscape", "minimalist"],
+                date: "2025-12-15"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1470114716159-e389f8712fda?w=500&h=500&fit=crop",
+                title: "Urban Geometry",
+                keywords: ["architecture", "urban", "geometric", "black and white"],
+                date: "2025-11-20"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1502684457165-08de5b4735f0?w=500&h=500&fit=crop",
+                title: "Ocean Splendor",
+                keywords: ["water", "sea", "landscape", "blue"],
+                date: "2025-10-08"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=500&fit=crop",
+                title: "Ethereal Light",
+                keywords: ["light", "abstract", "surreal", "minimalist"],
+                date: "2025-09-22"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1469255291795-ae8fa63fbb0d?w=500&h=500&fit=crop",
+                title: "Forest Whispers",
+                keywords: ["nature", "forest", "trees", "green"],
+                date: "2025-08-11"
+            }
+        ];
+
+        const gallery = document.getElementById('gallery');
+        const searchInput = document.getElementById('searchInput');
+        const noResults = document.getElementById('noResults');
+        const resultCount = document.getElementById('resultCount');
+
+        // Render gallery with optional filter
+        function renderGallery(filterText = '') {
+            gallery.innerHTML = '';
+            noResults.style.display = 'none';
+
+            // Filter photography data based on search input
+            const filtered = photographyData.filter(photo => {
+                const searchLower = filterText.toLowerCase();
+                const titleMatch = photo.title.toLowerCase().includes(searchLower);
+                const keywordsMatch = photo.keywords.some(keyword => 
+                    keyword.toLowerCase().includes(searchLower)
+                );
+                const dateMatch = photo.date.includes(filterText);
+
+                return titleMatch || keywordsMatch || dateMatch;
+            });
+
+            // Display results
+            if (filtered.length === 0) {
+                noResults.style.display = 'block';
+                resultCount.textContent = '';
+            } else {
+                filtered.forEach(photo => {
+                    const item = document.createElement('div');
+                    item.className = 'gallery-item';
+                    item.innerHTML = `
+                        <img src="${photo.src}" alt="${photo.title}">
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">${photo.title}</div>
+                            <div class="gallery-date">${photo.date}</div>
+                        </div>
+                    `;
+                    gallery.appendChild(item);
+                });
+                resultCount.textContent = `${filtered.length} photo${filtered.length !== 1 ? 's' : ''} found`;
+            }
+        }
+
+        // Event listener for real-time search
+        searchInput.addEventListener('input', (e) => {
+            renderGallery(e.target.value);
+        });
+
+        // Initial render
+        renderGallery();
+    </script>
+</body>
+</html>
