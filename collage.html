@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abstract Art Collage — ANTICS</title>
+  <style>
+    :root{--bg:#0a0a0a;--fg:#fff;--muted:#444;--accent:#ccff00}
+    *{box-sizing:border-box}
+    html,body{height:100%;background:var(--bg);color:var(--fg);font-family:'Courier New',monospace}
+    body{padding:28px;display:flex;flex-direction:column;gap:18px}
+
+    /* heavy, expensive motion */
+    .collage-wrap *{transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1)}
+
+    .header{display:flex;align-items:center;gap:12px}
+    .title{font-size:18px;letter-spacing:2px}
+
+    /* container for the overlapping artwork */
+    .collage{position:relative;width:100%;height:76vh;max-height:920px;background:transparent;overflow:visible;border-radius:6px}
+
+    /* SVG connectors sit behind frames */
+    .connectors{position:absolute;inset:0;z-index:1;pointer-events:none}
+    .connectors line,.connectors polyline{stroke:var(--muted);stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;fill:none}
+
+    /* image frame: absolute positioned art pieces */
+    .frame{position:absolute;padding:14px;background:#0a0a0a;border:6px solid rgba(10,10,10,0.92);box-shadow:0 6px 30px rgba(0,0,0,0.6);border-radius:6px;z-index:5;transform-origin:center center}
+
+    /* inner element handles sway and scale so rotate on .frame is preserved */
+    .frame-inner{width:100%;height:100%;display:block;overflow:hidden;border-radius:4px;animation: sway 6s ease-in-out infinite;will-change:transform}
+
+    .frame img{display:block;width:100%;height:100%;object-fit:cover;display:block}
+
+    /* ensure frames never touch visually: padding + border provide breathing room */
+    .frame{pointer-events:auto}
+
+    /* Hover stops sway, brings to front, scales */
+    .frame:hover{z-index:100;transform:translateZ(0)}
+    .frame:hover .frame-inner{animation-play-state:paused;transform:scale(1.03)}
+
+    /* artwork positions (percent-based for responsive layout) */
+    .f1{left:6%;top:8%;width:24%;transform:rotate(-6deg);z-index:6}
+    .f2{left:38%;top:6%;width:30%;transform:rotate(8deg);z-index:4}
+    .f3{left:66%;top:28%;width:22%;transform:rotate(-4deg);z-index:5}
+    .f4{left:54%;top:56%;width:34%;transform:rotate(6deg);z-index:3}
+    .f5{left:20%;top:62%;width:26%;transform:rotate(-2deg);z-index:2}
+    .f6{left:10%;top:36%;width:20%;transform:rotate(10deg);z-index:7}
+
+    /* Artistic buttons - integrate into art */
+    .art-btn{position:absolute;z-index:90;left:88%;top:12%;display:inline-flex;align-items:center;gap:8px;color:var(--fg);text-decoration:none;font-size:13px}
+    .art-btn .glyph{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--fg);display:inline-block;position:relative;transform-origin:center center}
+    .art-btn .glyph::after{content:'';position:absolute;inset:50% auto auto 50%;width:8px;height:8px;border-radius:50%;transform:translate(-50%,-50%);background:transparent}
+
+    /* morph: circle expands into thin line */
+    .art-btn .glyph{transition:all 0.6s cubic-bezier(0.23, 1, 0.32, 1)}
+    .art-btn:hover .glyph{width:46px;border-radius:4px;border-width:1px;transform:translateX(4px)}
+    .art-btn .label{position:relative}
+    .art-btn .label::after{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:var(--fg);opacity:0.18;transform:translateY(-50%) scaleX(0.8)}
+    .art-btn:hover .label::after{transform:translateY(-50%) scaleX(1.2);opacity:0.28}
+
+    /* subtle heavy transition applied globally for a heavy feel */
+    .collage-wrap{max-width:1200px;margin:0 auto}
+
+    /* sway animation */
+    @keyframes sway{
+      0%{transform:translateY(0)}
+      50%{transform:translateY(2px)}
+      100%{transform:translateY(0)}
+    }
+
+    /* responsive tweaks */
+    @media (max-width:900px){
+      .f2{left:34%;top:4%;width:36%}
+      .f4{left:48%;top:52%;width:40%}
+      .collage{height:72vh}
+      .art-btn{left:78%}
+    }
+    @media (max-width:520px){
+      .f1{left:6%;top:6%;width:40%;transform:rotate(-4deg)}
+      .f2{left:52%;top:6%;width:40%;transform:rotate(2deg)}
+      .f3{left:6%;top:46%;width:46%;transform:rotate(0deg)}
+      .f4{left:52%;top:46%;width:46%;transform:rotate(0deg)}
+      .f5,.f6{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="collage-wrap">
+    <div class="header">
+      <div class="title">Abstract Art Collage</div>
+      <a class="art-btn" href="#" aria-label="Minimal action">
+        <span class="glyph" aria-hidden="true"></span>
+        <span class="label">minimal action</span>
+      </a>
+    </div>
+
+    <div class="collage" role="region" aria-label="Art collage">
+      <!-- connectors SVG sits behind the frames -->
+      <svg class="connectors" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <!-- continuous web: f1->f2->f3->f4->f5->f6->f1 -->
+        <polyline points="19,20 54,15 77,36 70,64 33,72 22,46 19,20" />
+        <!-- subtle extra links -->
+        <line x1="54" y1="15" x2="33" y2="72" />
+        <line x1="77" y1="36" x2="22" y2="46" />
+      </svg>
+
+      <!-- frames (images inside inner element: sway applied to inner) -->
+      <div class="frame f1">
+        <div class="frame-inner"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1000&q=80&auto=format&fit=crop" alt="frame 1"></div>
+      </div>
+
+      <div class="frame f2">
+        <div class="frame-inner"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1000&q=80&auto=format&fit=crop" alt="frame 2"></div>
+      </div>
+
+      <div class="frame f3">
+        <div class="frame-inner"><img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?w=1000&q=80&auto=format&fit=crop" alt="frame 3"></div>
+      </div>
+
+      <div class="frame f4">
+        <div class="frame-inner"><img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?w=1000&q=80&auto=format&fit=crop" alt="frame 4"></div>
+      </div>
+
+      <div class="frame f5">
+        <div class="frame-inner"><img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=1000&q=80&auto=format&fit=crop" alt="frame 5"></div>
+      </div>
+
+      <div class="frame f6">
+        <div class="frame-inner"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1000&q=80&auto=format&fit=crop" alt="frame 6"></div>
+      </div>
+
+      <!-- an extra minimalist circular action that morphs into a line on hover, placed near image 3 -->
+      <a class="art-btn" href="#" style="left:62%;top:42%;z-index:92"> 
+        <span class="glyph"></span>
+        <span class="label">view</span>
+      </a>
+
+    </div>
+  </div>
+
+</body>
+</html>
