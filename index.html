@@ -57,8 +57,8 @@
         .gallery {
             position: relative;
             width: 100%;
-            height: 100%;
-            overflow: hidden;
+            height: 300vh; /* spread images vertically down the page */
+            overflow: visible;
         }
 
         .image-item {
@@ -88,50 +88,17 @@
         }
 
         /* Image Positioning - Abstract Scattered Layout */
-        .image-1 {
-            width: 280px;
-            height: 320px;
-            top: 8%;
-            left: 12%;
-            z-index: 5;
-            transform: rotate(-8deg);
-        }
-
-        .image-2 {
-            width: 240px;
-            height: 380px;
-            top: 35%;
-            right: 15%;
-            z-index: 3;
-            transform: rotate(5deg);
-        }
-
-        .image-3 {
-            width: 320px;
-            height: 250px;
-            top: 55%;
-            left: 25%;
-            z-index: 4;
-            transform: rotate(12deg);
-        }
-
-        .image-4 {
-            width: 260px;
-            height: 300px;
-            bottom: 10%;
-            right: 28%;
-            z-index: 2;
-            transform: rotate(-6deg);
-        }
-
-        .image-5 {
-            width: 300px;
-            height: 280px;
-            bottom: 15%;
-            left: 5%;
-            z-index: 6;
-            transform: rotate(3deg);
-        }
+        /* Spread images vertically so they form a down-the-line sequence */
+        .image-1 { width: 320px; height: 360px; top: 4%; left: 8%; z-index: 6; transform: rotate(-6deg); }
+        .image-2 { width: 280px; height: 340px; top: 14%; left: 62%; z-index: 4; transform: rotate(8deg); }
+        .image-3 { width: 300px; height: 300px; top: 26%; left: 18%; z-index: 5; transform: rotate(4deg); }
+        .image-4 { width: 260px; height: 320px; top: 38%; left: 66%; z-index: 3; transform: rotate(-6deg); }
+        .image-5 { width: 300px; height: 280px; top: 50%; left: 12%; z-index: 7; transform: rotate(3deg); }
+        .image-6 { width: 280px; height: 360px; top: 62%; left: 58%; z-index: 5; transform: rotate(-4deg); }
+        .image-7 { width: 320px; height: 300px; top: 72%; left: 22%; z-index: 6; transform: rotate(7deg); }
+        .image-8 { width: 260px; height: 340px; top: 82%; left: 64%; z-index: 3; transform: rotate(-8deg); }
+        .image-9 { width: 300px; height: 300px; top: 92%; left: 14%; z-index: 8; transform: rotate(2deg); }
+        .image-10{ width: 280px; height: 320px; top: 105%; left: 58%; z-index: 4; transform: rotate(5deg); }
 
         /* Brutalist Navigation - Fixed Corners */
         nav {
@@ -155,33 +122,17 @@
             transform: scale(1.05);
         }
 
-        .nav-top-left {
-            top: 20px;
-            left: 20px;
+        /* Top center bar with primary buttons */
+        .topbar{
+            position:fixed;top:18px;left:50%;transform:translateX(-50%);
+            display:flex;gap:18px;align-items:center;z-index:200;pointer-events:auto
         }
 
-        .nav-top-right {
-            top: 20px;
-            right: 20px;
-        }
+        .topbar a{display:inline-block;color:inherit;text-decoration:none;padding:10px 14px;border:1px solid rgba(204,255,0,0.08);background:rgba(8,8,8,0.6);letter-spacing:1.5px}
 
-        .nav-top-center {
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+        .topbar a:hover{background:#ccff00;color:#080808;border-color:#ccff00;box-shadow:0 0 20px rgba(204,255,0,0.14)}
 
-        .nav-bottom-left {
-            bottom: 20px;
-            left: 20px;
-        }
-
-        .nav-bottom-right {
-            bottom: 20px;
-            right: 20px;
-        }
-
-        /* Cursor Mix-Blend-Mode Effect */
+        /* Cursor Mix-Blend-Mode Effect (kept subtle) */
         body::before {
             content: '';
             position: fixed;
@@ -195,21 +146,7 @@
             opacity: 0.6;
         }
 
-        /* Subtle Grid Pattern Overlay */
-        body::after {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            background-image:
-                linear-gradient(0deg, transparent 24%, rgba(204, 255, 0, 0.05) 25%, rgba(204, 255, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(204, 255, 0, 0.05) 75%, rgba(204, 255, 0, 0.05) 76%, transparent 77%, transparent),
-                linear-gradient(90deg, transparent 24%, rgba(204, 255, 0, 0.05) 25%, rgba(204, 255, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(204, 255, 0, 0.05) 75%, rgba(204, 255, 0, 0.05) 76%, transparent 77%, transparent);
-            background-size: 50px 50px;
-        }
+        /* Remove subtle grid - we'll draw winding connector lines behind images via SVG */
 
         /* Responsive for smaller screens */
         @media (max-width: 768px) {
@@ -233,26 +170,45 @@
     <div id="scrollViewport">
         <div id="loop">
             <section class="scene">
-                <div class="layer bg" data-speed="0.18">
+                <div class="layer bg" data-speed="0.12">
                     <div class="hero-text"><span>ANTICS</span></div>
+                    <!-- connectors SVG: winding lines behind images (coordinates approximate) -->
+                    <svg class="connectors" viewBox="0 0 100 300" preserveAspectRatio="none" style="position:absolute;inset:0;z-index:8;pointer-events:none">
+                        <polyline points="12,5 62,15 18,28 66,40 14,52 60,64 20,78 68,88 16,102 60,112" stroke="#444" stroke-width="0.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </div>
 
                 <div class="layer mid" data-speed="0.45">
                     <div class="gallery">
                         <div class="image-item image-1">
-                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=500&fit=crop" alt="Portfolio image 1">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=1200&fit=crop" alt="Portfolio image 1">
                         </div>
                         <div class="image-item image-2">
-                            <img src="https://images.unsplash.com/photo-1606986628025-35d57e735ae0?w=400&h=600&fit=crop" alt="Portfolio image 2">
+                            <img src="https://images.unsplash.com/photo-1606986628025-35d57e735ae0?w=900&h=1200&fit=crop" alt="Portfolio image 2">
                         </div>
                         <div class="image-item image-3">
-                            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&h=400&fit=crop" alt="Portfolio image 3">
+                            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=1200&fit=crop" alt="Portfolio image 3">
                         </div>
                         <div class="image-item image-4">
-                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=500&fit=crop" alt="Portfolio image 4">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&h=1200&fit=crop" alt="Portfolio image 4">
                         </div>
                         <div class="image-item image-5">
-                            <img src="https://images.unsplash.com/photo-1574158622282-cd922ab0f2a4?w=500&h=450&fit=crop" alt="Portfolio image 5">
+                            <img src="https://images.unsplash.com/photo-1574158622282-cd922ab0f2a4?w=900&h=1200&fit=crop" alt="Portfolio image 5">
+                        </div>
+                        <div class="image-item image-6">
+                            <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=900&h=1200&fit=crop" alt="Portfolio image 6">
+                        </div>
+                        <div class="image-item image-7">
+                            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=900&h=1200&fit=crop" alt="Portfolio image 7">
+                        </div>
+                        <div class="image-item image-8">
+                            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=900&h=1200&fit=crop" alt="Portfolio image 8">
+                        </div>
+                        <div class="image-item image-9">
+                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=900&h=1200&fit=crop" alt="Portfolio image 9">
+                        </div>
+                        <div class="image-item image-10">
+                            <img src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?w=900&h=1200&fit=crop" alt="Portfolio image 10">
                         </div>
                     </div>
                 </div>
@@ -264,12 +220,12 @@
         </div>
     </div>
 
-    <!-- Brutalist Navigation in Four Corners -->
-    <nav class="nav-top-left"><a href="works.html" style="color: inherit; text-decoration: none;">WORKS</a></nav>
-    <nav class="nav-top-center"><a href="social.html" style="color: inherit; text-decoration: none;">LIVE FEED</a></nav>
-    <nav class="nav-top-right">CONTACT</nav>
-    <nav class="nav-bottom-left">INFO</nav>
-    <nav class="nav-bottom-right">CV</nav>
+    <!-- Top-centered primary buttons -->
+    <nav class="topbar" role="navigation" aria-label="Primary">
+        <a href="works.html">WORKS</a>
+        <a href="social.html">LIVE FEED</a>
+        <a href="#info">INFO</a>
+    </nav>
 
     <script>
         // Navigation click logging (keep lightweight)
@@ -316,17 +272,37 @@
                 duplicate();
                 layers = document.querySelectorAll('.scene .layer');
 
-                // keep parallax in sync on scroll
-                window.addEventListener('scroll', function() {
-                    onScroll();
-                    // handle jump wrapping to keep scroll continuous
-                    const half = loop.scrollHeight / 2;
-                    if (window.scrollY >= half) {
-                        window.scrollTo(0, window.scrollY - half);
-                    } else if (window.scrollY <= 0) {
-                        window.scrollTo(0, window.scrollY + half);
-                    }
-                }, {passive: true});
+                    // keep parallax in sync on scroll and cross-fade duplicates
+                    const firstScene = loop.children[0];
+                    const secondScene = loop.children[1];
+                    if (firstScene) firstScene.style.transition = 'opacity 0.6s cubic-bezier(0.23,1,0.32,1)';
+                    if (secondScene) secondScene.style.transition = 'opacity 0.6s cubic-bezier(0.23,1,0.32,1)';
+
+                    window.addEventListener('scroll', function() {
+                        onScroll();
+                        // handle jump wrapping to keep scroll continuous
+                        const half = loop.scrollHeight / 2;
+                        let y = window.scrollY;
+
+                        // crossfade amount within the half block
+                        const posInHalf = y % half;
+                        const ratio = Math.min(Math.max(posInHalf / half, 0), 1);
+                        // eased transition
+                        const eased = 0.5 - 0.5 * Math.cos(ratio * Math.PI);
+                        if (firstScene && secondScene) {
+                            firstScene.style.opacity = (1 - eased).toString();
+                            secondScene.style.opacity = (eased).toString();
+                            // only allow pointer events on the more visible scene
+                            firstScene.style.pointerEvents = (1 - eased) > 0.5 ? 'auto' : 'none';
+                            secondScene.style.pointerEvents = (eased) > 0.5 ? 'auto' : 'none';
+                        }
+
+                        if (y >= half) {
+                            window.scrollTo(0, y - half);
+                        } else if (y <= 0) {
+                            window.scrollTo(0, y + half);
+                        }
+                    }, {passive: true});
 
                 // initial call
                 updateParallax();
