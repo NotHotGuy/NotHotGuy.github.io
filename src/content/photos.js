@@ -20,6 +20,29 @@ export const photoInfo = {
   dsc03306: { alt: 'A smiling clarinetist in mirrored sunglasses makes a heart with both hands among the band', focus: '57% 52%' },
   dsc04265: { alt: 'Rows of band members in maroon and white, instruments at rest, seen from within the stands', focus: '50% 50%' },
 
+  // — Cover —
+  dsc01201: { alt: 'A long-haired sable-and-white dog sits in fresh snow on a wooded hillside as flakes fall', focus: '40% 40%' },
+
+  // — New frames (September 2026 upload) —
+  dsc01355: { alt: 'A smiling person with long copper braids and a denim jacket, pink blossoms overhead', focus: '45% 38%' },
+  dsc01393: { alt: 'A person in a denim jacket stands beneath a flowering cherry tree, backlit by soft sun', focus: '50% 35%' },
+  dsc01656: { alt: 'A chestnut horse in a rope halter leans toward the camera with a curious look', focus: '60% 35%' },
+  dsc02356: { alt: 'Two people silhouetted in an embrace against a sunset sky over open water', focus: '48% 50%' },
+  dsc02401: { alt: 'Four friends on waterfront rocks at sunset, two of them carried in the others’ arms', focus: '45% 55%' },
+  dsc03214: { alt: 'A marching band member in a VT uniform raises a gloved fist against a bright blue sky', focus: '55% 40%' },
+  dsc03645: { alt: 'Trumpets raised under stadium lights by players in maroon uniforms', focus: '55% 45%' },
+  'img-9226': { alt: 'Trumpet players in plumed VT shakos perform on the field in front of a packed crowd', focus: '40% 40%' },
+  'img-9229': { alt: 'A trumpet player in a plumed VT shako stands at attention holding the horn upright, crowd blurred behind', focus: '50% 45%' },
+
+  // Low-resolution copy (1125×844) sent in chat; fine at gallery size.
+  'snow-day-cover': { alt: 'A snowball fight on a snowy campus: a crowd in winter coats and camouflage with homemade shields beneath stone pylons and snow-laden trees', focus: '50% 58%' },
+
+  // — Portraits —
+  '79a1143': { alt: 'A smiling person in a red hijab and white knit top, hands cupped beneath the chin, against dark foliage', focus: '45% 40%' },
+  'img-3394': { alt: 'Someone with long braids looks back over their shoulder beside a high window overlooking the Manhattan skyline', focus: '78% 55%' },
+  'img-3389': { alt: 'Someone with braids rests their chin on one hand, bathed in green light', focus: '60% 40%' },
+  'img-7952': { alt: 'A person with a gold leaf crown in their hair looks toward the camera out of deep shadow', focus: '50% 55%', tone: 'dark' },
+
   // — Night & light —
   dsc03793: { alt: 'A photographer lit from the front by a bright beam, camera raised, against a deep blue night', focus: '64% 48%', tone: 'dark' },
   dsc00314: { alt: 'Extreme close-up of a single eye catching two points of blue light in darkness', focus: '62% 70%', tone: 'dark' },
@@ -53,25 +76,25 @@ export const collections = [
     id: 'game-day',
     title: 'Game Day',
     meta: 'Virginia Tech',
-    photos: ['dsc04324', 'dsc03314', 'dsc04265', 'dsc03306'],
+    photos: ['dsc04324', 'dsc03214', 'dsc03314', 'img-9229', 'dsc04265', 'img-9226', 'dsc03645', 'dsc03306'],
   },
   {
-    id: 'night-and-light',
-    title: 'Night & Light',
-    meta: 'Portrait / Weather',
-    photos: ['dsc03793', 'dsc00314', 'img-1370'],
+    id: 'portraits',
+    title: 'Portraits',
+    meta: 'People / Light',
+    photos: ['79a1143', 'dsc01355', 'img-3389', 'dsc01393', 'img-3394', 'dsc03793', 'img-7952', 'dsc00314', 'dsc02356'],
+  },
+  {
+    id: 'nature',
+    title: 'Nature',
+    meta: 'Weather / Coast / Animals',
+    photos: ['dsc01201', 'img-1370', 'dsc01656', '9b02ec2f-da32-4bcb-93b3-4ef716425f62-2', 'img-5488', '9b02ec2f-da32-4bcb-93b3-4ef716425f62'],
   },
   {
     id: 'field-notes',
     title: 'Field Notes',
-    meta: 'Places / Companions',
-    photos: ['img-1755', 'img-5488'],
-  },
-  {
-    id: 'experiments',
-    title: 'Experiments',
-    meta: 'Edits / Composites',
-    photos: ['9b02ec2f-da32-4bcb-93b3-4ef716425f62-2', 'img-9313', '9b02ec2f-da32-4bcb-93b3-4ef716425f62'],
+    meta: 'Places / Moments',
+    photos: ['dsc02401', 'snow-day-cover', 'img-1755', 'img-9313'],
   },
   {
     id: 'built-worlds',
@@ -91,7 +114,9 @@ export const collections = [
 
 /** Homepage art direction. Each row is a deliberate composition. */
 export const home = {
-  hero: 'dsc03793',
+  hero: 'dsc01201',
+  // Which side the title block sits on — put it opposite the subject.
+  heroAlign: 'right',
 
   // Rows of the "Selected work" exhibition. Layouts:
   //   pair     large image + smaller offset image   { photos: [large, small], flip? }

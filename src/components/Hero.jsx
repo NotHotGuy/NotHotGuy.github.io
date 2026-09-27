@@ -51,7 +51,7 @@ export default function Hero() {
   const exposure = exposureLine(photo)
 
   return (
-    <section ref={ref} className="hero" aria-labelledby="hero-title">
+    <section ref={ref} className={`hero ${home.heroAlign === 'right' ? 'hero--right' : ''}`} aria-labelledby="hero-title">
       <div className="hero__image">
         <Photo photo={photo} fit="cover" sizes="100vw" priority />
       </div>
