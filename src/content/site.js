@@ -62,11 +62,27 @@ export const services = [
   },
 ]
 
-/** About page. OWNER: replace with your own words. */
+/**
+ * About page. Written in the first person so it reads as you.
+ * OWNER: make it yours — every line here is editable, and `name` (empty by
+ * default) adds "I'm <name>" to the intro when filled in.
+ */
 export const about = {
+  name: '',
+  headline: ['Focused on people.', 'Antics welcome.'],
   intro:
-    'FocusedAntics is a photography practice that treats every frame as an experiment with light — night skies, game-day brass, quiet portraits and the occasional impossible world.',
+    'I photograph the moments people forget to pose for — game-day brass mid-note, a campus snowball fight, a friend caught in the light before they notice the camera.',
   body: [
-    'The work moves between a full-frame camera and a phone in a pocket, between stadium noise and still rooms. What connects it is attention: waiting for the moment the light and the subject agree.',
+    'Most of what I shoot starts with a feeling rather than a plan: the energy of a crowd, a colour that won’t leave me alone, a face that deserves more than a phone snap. I carry a full-frame camera when I can and a phone when I can’t, and I edit on the move.',
+    'The antics are half the point. I’d rather be in the middle of the noise than behind a rope — close enough that the photograph feels like you were there.',
+  ],
+  // Three frames for the collage at the top of the page (slugs from content/photos.js).
+  collage: ['dsc03793', '79a1143', 'snow-day-cover'],
+  // "What I shoot" — each links to a collection on the Work page.
+  subjects: [
+    { collection: 'game-day', line: 'Stadiums, sidelines and the band that never stops.' },
+    { collection: 'portraits', line: 'People, with light that suits them.' },
+    { collection: 'nature', line: 'Storms, coastlines and good dogs.' },
+    { collection: 'built-worlds', line: 'Virtual photography inside worlds made of blocks.' },
   ],
 }

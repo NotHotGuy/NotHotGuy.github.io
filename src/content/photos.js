@@ -20,6 +20,18 @@ export const photoInfo = {
   dsc03306: { alt: 'A smiling clarinetist in mirrored sunglasses makes a heart with both hands among the band', focus: '57% 52%' },
   dsc04265: { alt: 'Rows of band members in maroon and white, instruments at rest, seen from within the stands', focus: '50% 50%' },
 
+  // — Cover —
+  // OWNER: this master is the 1125×844 copy sent in chat. Replace
+  // photos/originals/snow-day-cover.jpg with the full-resolution original
+  // (same file name) and run npm run optimize-images.
+  'snow-day-cover': { alt: 'A snowball fight on a snowy campus: a crowd in winter coats and camouflage with homemade shields beneath stone pylons and snow-laden trees', focus: '50% 58%' },
+
+  // — Portraits —
+  '79a1143': { alt: 'A smiling person in a red hijab and white knit top, hands cupped beneath the chin, against dark foliage', focus: '45% 40%' },
+  'img-3394': { alt: 'Someone with long braids looks back over their shoulder beside a high window overlooking the Manhattan skyline', focus: '78% 55%' },
+  'img-3389': { alt: 'Someone with braids rests their chin on one hand, bathed in green light', focus: '60% 40%' },
+  'img-7952': { alt: 'A person with a gold leaf crown in their hair looks toward the camera out of deep shadow', focus: '50% 55%', tone: 'dark' },
+
   // — Night & light —
   dsc03793: { alt: 'A photographer lit from the front by a bright beam, camera raised, against a deep blue night', focus: '64% 48%', tone: 'dark' },
   dsc00314: { alt: 'Extreme close-up of a single eye catching two points of blue light in darkness', focus: '62% 70%', tone: 'dark' },
@@ -56,22 +68,22 @@ export const collections = [
     photos: ['dsc04324', 'dsc03314', 'dsc04265', 'dsc03306'],
   },
   {
-    id: 'night-and-light',
-    title: 'Night & Light',
-    meta: 'Portrait / Weather',
-    photos: ['dsc03793', 'dsc00314', 'img-1370'],
+    id: 'portraits',
+    title: 'Portraits',
+    meta: 'People / Light',
+    photos: ['79a1143', 'img-3389', 'img-3394', 'dsc03793', 'img-7952', 'dsc00314'],
+  },
+  {
+    id: 'nature',
+    title: 'Nature',
+    meta: 'Weather / Coast / Animals',
+    photos: ['img-1370', '9b02ec2f-da32-4bcb-93b3-4ef716425f62-2', 'img-5488', '9b02ec2f-da32-4bcb-93b3-4ef716425f62'],
   },
   {
     id: 'field-notes',
     title: 'Field Notes',
-    meta: 'Places / Companions',
-    photos: ['img-1755', 'img-5488'],
-  },
-  {
-    id: 'experiments',
-    title: 'Experiments',
-    meta: 'Edits / Composites',
-    photos: ['9b02ec2f-da32-4bcb-93b3-4ef716425f62-2', 'img-9313', '9b02ec2f-da32-4bcb-93b3-4ef716425f62'],
+    meta: 'Places / Moments',
+    photos: ['snow-day-cover', 'img-1755', 'img-9313'],
   },
   {
     id: 'built-worlds',
@@ -91,7 +103,7 @@ export const collections = [
 
 /** Homepage art direction. Each row is a deliberate composition. */
 export const home = {
-  hero: 'dsc03793',
+  hero: 'snow-day-cover',
 
   // Rows of the "Selected work" exhibition. Layouts:
   //   pair     large image + smaller offset image   { photos: [large, small], flip? }

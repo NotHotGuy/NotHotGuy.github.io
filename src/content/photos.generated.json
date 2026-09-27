@@ -172,6 +172,32 @@
       "year": 2026
     }
   },
+  "79a1143": {
+    "slug": "79a1143",
+    "source": "_79A1143.JPG",
+    "sourceBytes": 4272106,
+    "width": 4173,
+    "height": 2781,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2560
+    ],
+    "placeholder": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JbACdMoACskSSzVq1byY91xC8AAD+7FYCfu6x7RxpBQfLTznZP4DJLo0TwYSW1d2JI72CFx6xkzOTdwDWIuT/6k/NnH8YlQpQcTqv7ss7N1hpQQ9ZLWZMvbJjAfu8Amu2qcbNSRdZ2kmSFfzeeG1DFvskyB+Wl+gVyzUVPFLYiKWHXziN3wqvBCX8+AkzAAA=",
+    "color": "rgb(8 8 8)",
+    "exif": {
+      "camera": "Canon EOS R",
+      "lens": "RF24-105mm F4 L IS USM",
+      "focal": "45mm",
+      "aperture": "ƒ/4",
+      "shutter": "1/2500",
+      "iso": "ISO 125",
+      "year": 2025
+    }
+  },
   "9b02ec2f-da32-4bcb-93b3-4ef716425f62": {
     "slug": "9b02ec2f-da32-4bcb-93b3-4ef716425f62",
     "source": "9B02EC2F-DA32-4BCB-93B3-4EF716425F62.jpeg",
@@ -429,6 +455,58 @@
       "year": 2025
     }
   },
+  "img-3389": {
+    "slug": "img-3389",
+    "source": "IMG_3389.HEIC",
+    "sourceBytes": 1342926,
+    "width": 3024,
+    "height": 4032,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2560
+    ],
+    "placeholder": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAACwBQCdASoSABgAPu1uq1EppiOiqAqpMB2JaACdMtVERxaBgYpRnj1oocFcibQEuHNpJL9N9WAA/sA6Njut+sMG84xsnM4qmclLeeAp8JgHIssG9I2g4EPgJWpYT+2N7qRaorlh+vIftbF5XMIiALkIzx+7HEgdHx4N/XcrxQKdgbfkbWdaB91fLsTR48G47xaB6GIjsOTft4w4ZGxVWjwSFV1p3tS/wkn0HCyJ8OpftI5Z01prnwRqAFi7YZ3AEYGIAAAA",
+    "color": "rgb(8 40 8)",
+    "exif": {
+      "camera": "Apple iPhone 14 Pro",
+      "lens": "6.86mm f/1.78",
+      "focal": "7mm",
+      "aperture": "ƒ/1.8",
+      "shutter": "1/29",
+      "iso": "ISO 2000",
+      "year": 2024
+    }
+  },
+  "img-3394": {
+    "slug": "img-3394",
+    "source": "IMG_3394.HEIC",
+    "sourceBytes": 1686383,
+    "width": 4032,
+    "height": 3024,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2560
+    ],
+    "placeholder": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAACwBQCdASoYABIAPu1mqk2ppaQiMAgBMB2JagCdM2h6XfRgPf7i0/Lw2lEzH5qcl/ihF1uCg4AA+FxRpeCs6yY1dhe1iB7TdWK8E1Zs74R/9ByX2qqYAoxFiTmtOI7KWk5HZau+K/Cwmb5DqJl4jYAh7s3Ye/e2UpuHnhf1li+2vhUnVZMMu0s0aGOlz2yhepJiaoN8jaQP7pjNRR1O9CRXT9acxSxytdFJ/JSrnW9sTcOCoVMzi+ILinh3v9YJg9hbvcGR1jz/kIwHjf5EQAAA",
+    "color": "rgb(8 8 40)",
+    "exif": {
+      "camera": "Apple iPhone 14 Pro",
+      "lens": "6.86mm f/1.78",
+      "focal": "7mm",
+      "aperture": "ƒ/1.8",
+      "shutter": "1/1304",
+      "iso": "ISO 80",
+      "year": 2024
+    }
+  },
   "img-5488": {
     "slug": "img-5488",
     "source": "IMG_5488.HEIC",
@@ -455,6 +533,32 @@
       "year": 2025
     }
   },
+  "img-7952": {
+    "slug": "img-7952",
+    "source": "IMG_7952.JPG",
+    "sourceBytes": 454451,
+    "width": 2048,
+    "height": 3640,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2048
+    ],
+    "placeholder": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAwCdASoOABgAPu1iqU2ppaQiMAgBMB2JZQDE2CHfT5uzxXgkSYAA/vQbL63d5IYvGEPYKmIQpfpsP0CvXEtWXUvBxZgtCI8AAA==",
+    "color": "rgb(8 8 8)",
+    "exif": {
+      "camera": "Apple iPhone 14 Pro",
+      "lens": "6.86mm f/1.78",
+      "focal": "7mm",
+      "aperture": "ƒ/1.8",
+      "shutter": "1/17",
+      "iso": "ISO 640",
+      "year": 2025
+    }
+  },
   "img-9313": {
     "slug": "img-9313",
     "source": "IMG_9313.PNG",
@@ -468,6 +572,21 @@
       1365
     ],
     "placeholder": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAADwAwCdASoQABgAPu1iqU2ppaOiMAgBMB2JbAC06BTmzRzmo43pbacAAP7kHCJueLwX74wyNAF6sLl43jCFrCVods4k2JBEUOWnvAuiG1QLi8u6HzM/9jbd09Z7eA/UzFF9GgGmHDFoJVp59dhV4k4fb07Fc66X7n2246hOdFnAzEJtSxMGOdABIAA=",
+    "color": "rgb(8 8 8)",
+    "exif": null
+  },
+  "snow-day-cover": {
+    "slug": "snow-day-cover",
+    "source": "snow-day-cover.jpg",
+    "sourceBytes": 385057,
+    "width": 1125,
+    "height": 844,
+    "widths": [
+      640,
+      960,
+      1125
+    ],
+    "placeholder": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAACQBACdASoYABIAPu1ur1KppiQiqAgBMB2JYwDHMA3LX24wJoJS+dYZC9M9ytAA/hbcSR+mr+u2OZm19zOYdDUb8d0GAKC0JGyBndqGavTevkB/1wx33OtSu9VX2r7U4Fi7gSsg6KJzwWpyL17IFoq8Xkc6mPEmi2QjfoZyUo1ZcfV4Kjbimy1XA2JJyis5kzoVi4kTzZkcIfaZtV+ifDch1uXzhHFPnCNFKgzBFIymAUdSJQAAAA==",
     "color": "rgb(8 8 8)",
     "exif": null
   }

@@ -64,13 +64,21 @@ async function load(file) {
  * Camera settings for editorial captions. Location (GPS) is deliberately never
  * read or published; delivery files carry no metadata at all.
  */
+/** "Canon" + "Canon EOS R" → "Canon EOS R"; "SONY" + "ILCE-7M3" → "Sony α7 III". */
+function cameraName(make = '', model = '') {
+  const m = String(model).trim()
+  const k = String(make).trim()
+  const name = !k || m.toLowerCase().startsWith(k.toLowerCase()) ? m : `${k} ${m}`
+  return name.replace(/^SONY ILCE-7M3$/, 'Sony α7 III').replace(/^SONY /, 'Sony ') || null
+}
+
 async function readExif(file) {
   try {
     const e = await exifr.parse(file, { gps: false, pick: ['Make', 'Model', 'LensModel', 'FocalLength', 'FNumber', 'ExposureTime', 'ISO', 'DateTimeOriginal'] })
     if (!e) return null
     const shutter = e.ExposureTime ? (e.ExposureTime >= 1 ? `${e.ExposureTime}s` : `1/${Math.round(1 / e.ExposureTime)}`) : null
     const out = {
-      camera: [e.Make, e.Model].filter(Boolean).join(' ').replace(/^SONY ILCE-7M3$/, 'Sony α7 III') || null,
+      camera: cameraName(e.Make, e.Model),
       lens: e.LensModel?.replace(/^iPhone .*? back .*?camera /, '') || null,
       focal: e.FocalLength ? `${Math.round(e.FocalLength)}mm` : null,
       aperture: e.FNumber ? `ƒ/${+e.FNumber.toFixed(1)}` : null,
@@ -103,7 +111,7 @@ async function processOne(file, previous) {
     previous?.sourceBytes === srcStat.size &&
     widths.every((w) => Object.keys(ENCODERS).every((ext) => existsSync(path.join(dir, `${slug}-${w}.${ext}`))))
 
-  if (upToDate) return { ...previous, exif: previous.exif ?? (await readExif(file)), _skipped: true }
+  if (upToDate) return { ...previous, exif: await readExif(file), _skipped: true }
 
   await fs.rm(dir, { recursive: true, force: true })
   await fs.mkdir(dir, { recursive: true })
