@@ -6,10 +6,10 @@ import ShaderStage from '../components/ShaderStage.jsx'
 import { services, site } from '../content/site.js'
 
 /**
- * Booking enquiry. There is no server: the enquiry is composed here and sent
- * through the owner's own channel — an email draft when site.contactEmail is
- * set, otherwise copied and handed to an Instagram DM. Nothing is stored or
- * sent to a third party by this page.
+ * Booking request. The site is static, so delivery goes through FormSubmit:
+ * the form POSTs the request and FormSubmit emails it to site.booking.email,
+ * with the visitor's address as reply-to. If that fails (offline, blocked),
+ * the visitor gets a pre-filled email draft to the same address instead.
  */
 export default function Book() {
   const [params] = useSearchParams()
@@ -17,8 +17,10 @@ export default function Book() {
   const [values, setValues] = useState({ name: '', email: '', session: initial ?? '', date: '', message: '' })
   const [errors, setErrors] = useState({})
   const [status, setStatus] = useState('')
+  const [state, setState] = useState('idle') // idle | sending | sent | fallback
   const id = useId()
 
+  const [honey, setHoney] = useState('') // spam trap; people never see or fill it
   const set = (k) => (e) => setValues((v) => ({ ...v, [k]: e.target.value }))
 
   const validate = () => {
@@ -54,18 +56,54 @@ export default function Book() {
       return
     }
     const body = compose()
-    if (site.contactEmail) {
-      const subject = body.split('\n')[0]
-      window.location.href = `mailto:${site.contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-      setStatus('Your email app should open with the enquiry ready to send.')
+    const subject = body.split('\n')[0]
+    const to = site.booking?.email
+
+    if (site.booking?.endpoint) {
+      setState('sending')
+      setStatus('Sending your request…')
+      try {
+        const session = services.find((s) => s.id === values.session)?.name ?? (values.session === 'other' ? 'Something else' : values.session)
+        const res = await fetch(site.booking.endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({
+            _subject: `${subject} — ${values.name}`,
+            _template: 'table',
+            _captcha: 'false',
+            _honey: honey,
+            name: values.name,
+            email: values.email,
+            session,
+            'preferred date': values.date || 'Not specified',
+            message: values.message,
+          }),
+        })
+        const data = await res.json().catch(() => ({}))
+        if (!res.ok || data.success === false || data.success === 'false') throw new Error(data.message || `HTTP ${res.status}`)
+        setState('sent')
+        setStatus(`Thanks, ${values.name.split(' ')[0]} — your request is in. You’ll get a reply at ${values.email}.`)
+        setValues((v) => ({ ...v, date: '', message: '' }))
+        return
+      } catch {
+        // fall through to an email draft
+      }
+    }
+
+    if (to) {
+      setState('fallback')
+      setStatus('The form couldn’t send just now, so your email app should open with the request ready to send. If it doesn’t, copy it below.')
+      window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
       return
     }
+
     let copied = false
     try {
       await navigator.clipboard.writeText(body)
       copied = true
     } catch {}
     window.open(site.instagram.dm, '_blank', 'noopener,noreferrer')
+    setState('fallback')
     setStatus(
       copied
         ? `Your enquiry is copied. Paste it into the Instagram message to @${site.instagram.handle} that just opened.`
@@ -138,16 +176,18 @@ export default function Book() {
               <textarea rows={5} required {...field('message')} />
               {err('message')}
             </div>
+            {/* spam trap: hidden from people and assistive tech, bots fill it */}
+            <input className="form__trap" type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" value={honey} onChange={(e) => setHoney(e.target.value)} />
             <div className="form__actions">
-              <Glass as="button" type="submit" className="btn btn--glass btn--primary" radius={999}>
-                {site.contactEmail ? 'Send enquiry' : 'Send via Instagram'}
+              <Glass as="button" type="submit" className="btn btn--glass btn--primary" radius={999} disabled={state === 'sending'} aria-disabled={state === 'sending'}>
+                {state === 'sending' ? 'Sending…' : site.booking?.email ? 'Send booking request' : 'Send via Instagram'}
               </Glass>
-              {!site.contactEmail && <p className="field__hint">Opens a message to @{site.instagram.handle} with your enquiry copied, ready to paste.</p>}
+              {!site.booking?.email && <p className="field__hint">Opens a message to @{site.instagram.handle} with your enquiry copied, ready to paste.</p>}
             </div>
-            <p className="form__status" role="status" aria-live="polite">
+            <p className={`form__status ${state === 'sent' ? 'is-sent' : ''}`} role="status" aria-live="polite">
               {status}
             </p>
-            {status && !site.contactEmail && <textarea className="form__copy" readOnly value={compose()} aria-label="Your enquiry" rows={6} />}
+            {state === 'fallback' && <textarea className="form__copy" readOnly value={compose()} aria-label="Your booking request" rows={6} />}
           </form>
         </div>
       </ShaderStage>

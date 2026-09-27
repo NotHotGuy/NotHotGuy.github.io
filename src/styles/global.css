@@ -1964,6 +1964,28 @@ a.contact__value:hover {
   min-height: 1.5em;
   color: var(--text);
 }
+.form__status.is-sent::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin: 0 10px 2px 0;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px rgba(227, 168, 87, 0.7);
+  vertical-align: middle;
+}
+.form__trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.form button[disabled] {
+  opacity: 0.7;
+  cursor: progress;
+}
 @media (max-width: 900px) {
   .book__inner {
     grid-template-columns: 1fr;
