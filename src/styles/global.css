@@ -833,9 +833,50 @@ main:focus {
   text-transform: none;
 }
 
+/* Title block on the right, for frames whose subject sits left. */
+.hero--right .hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+.hero--right .hero__statement {
+  margin-left: auto;
+}
+.hero--right .hero__ctas {
+  justify-content: flex-end;
+}
+.hero--right .hero__lens {
+  background:
+    radial-gradient(ellipse 50% 46% at 80% 78%, rgba(5, 5, 8, 0.66), rgba(5, 5, 8, 0) 100%),
+    linear-gradient(to top, rgba(5, 5, 8, 0.8) 0%, rgba(5, 5, 8, 0.3) 28%, rgba(5, 5, 8, 0) 52%),
+    radial-gradient(ellipse 85% 85% at 40% 48%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.4) 100%);
+}
+.hero--right .hero__exif {
+  right: auto;
+  left: calc(var(--gutter) + 34px);
+}
+
 @media (max-width: 760px) {
   .hero {
     min-height: 620px;
+  }
+  .hero--right .hero__lens,
+  .hero__lens {
+    background:
+      linear-gradient(to top, rgba(5, 5, 8, 0.92) 0%, rgba(5, 5, 8, 0.72) 30%, rgba(5, 5, 8, 0.2) 50%, rgba(5, 5, 8, 0) 60%),
+      radial-gradient(ellipse 120% 80% at 60% 40%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.4) 100%);
+  }
+  /* phones stack the title under the subject; keep it left-aligned */
+  .hero--right .hero__content {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .hero--right .hero__statement {
+    margin-left: 0;
+  }
+  .hero--right .hero__ctas {
+    justify-content: flex-start;
   }
   .hero__lens {
     background:
@@ -1308,6 +1349,85 @@ main:focus {
     min-height: 0;
     aspect-ratio: 3 / 2;
   }
+}
+
+/* ---------- Albums (Lightroom) ---------- */
+
+.albums {
+  padding-top: var(--section);
+  scroll-margin-top: 80px;
+}
+.albums__head {
+  margin-bottom: 18px;
+}
+.albums__lede {
+  color: var(--muted);
+  max-width: 52ch;
+  margin-bottom: clamp(36px, 6vh, 64px);
+}
+.albums__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(14px, 2vw, 28px);
+}
+.album-tile {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  text-decoration: none;
+  isolation: isolate;
+  background: var(--bg-raise);
+}
+.album-tile__image,
+.album-tile__image .photo {
+  position: absolute;
+  inset: 0;
+}
+.album-tile__image .photo.is-sharp img {
+  transition: transform 1.4s var(--ease), filter var(--t-slow) var(--ease);
+}
+.album-tile__body {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 2;
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+  padding: clamp(20px, 2.4vw, 32px);
+  background: linear-gradient(to top, rgba(5, 5, 8, 0.92), rgba(5, 5, 8, 0.66) 60%, rgba(5, 5, 8, 0));
+}
+.album-tile__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--line-strong);
+  transition: color var(--t-fast), border-color var(--t-fast);
+}
+@media (hover: hover) {
+  .album-tile:hover .photo.is-sharp img {
+    transform: scale(1.03);
+    filter: brightness(1.06);
+  }
+  .album-tile:hover .album-tile__cta {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+}
+.album-tile:focus-visible {
+  outline-offset: 4px;
+}
+.filter--link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
 }
 
 /* ---------- Work ---------- */

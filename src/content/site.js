@@ -25,6 +25,15 @@ export const site = {
   // stays hidden until this is filled in.
   lightroomAlbumUrl: '',
 
+  // Lightroom albums, shown in the Albums section of the Work page.
+  // OWNER: give each album its real title; `cover` is a slug from
+  // content/photos.js and `meta` is an optional small label.
+  albums: [
+    { url: 'https://adobe.ly/3VgRulm', title: 'Album 01', meta: '', cover: 'dsc03214' },
+    { url: 'https://adobe.ly/4iFu82O', title: 'Album 02', meta: '', cover: 'dsc01393' },
+    { url: 'https://adobe.ly/3UPW6io', title: 'Album 03', meta: '', cover: 'dsc02401' },
+  ],
+
   // OWNER: a public booking/contact email. When empty, the booking form
   // hands the finished inquiry over to Instagram DMs instead.
   contactEmail: '',

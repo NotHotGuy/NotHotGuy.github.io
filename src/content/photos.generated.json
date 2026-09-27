@@ -274,6 +274,188 @@
       "year": 2025
     }
   },
+  "dsc01201": {
+    "slug": "dsc01201",
+    "source": "DSC01201.JPG",
+    "sourceBytes": 4395810,
+    "width": 6000,
+    "height": 4000,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2560
+    ],
+    "placeholder": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JQBWGUABB84WeSsT31WP+NAAAzcW0xrvg9gl1y4Uw3gfqvtjYZrrIVygzsbx0brEiQ5cNPmM16pwvusweg4a9nhKMHs6u/ILXNxPrO73FMiL7/iWh76P2JT3jLWc3yUW8LQYmAYlBrbElBGgCpHC6rWRloIR1AAA=",
+    "color": "rgb(216 232 248)",
+    "exif": {
+      "camera": "Sony α7 III",
+      "lens": "E 70-300mm F4.5-6.3 A047",
+      "focal": "70mm",
+      "aperture": "ƒ/4.5",
+      "shutter": "1/5000",
+      "iso": "ISO 6400",
+      "year": 2026
+    }
+  },
+  "dsc01355": {
+    "slug": "dsc01355",
+    "source": "DSC01355.JPG",
+    "sourceBytes": 4410873,
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2560
+    ],
+    "placeholder": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAADwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACbdYLRFv6lmDMiqdgMmtwAA/sTw5f5s5E+kyjGBGorkIBSNgDQIqf98TDfUk73djNQabbCMOet2/ScDI8Jef6EnC8CFTyn0EVqp+d2v2QAbyfche8w+nm90+RvLO2BzOwwXjL8pezEo2ABX4d8tHtM57eHWYwtPAVz8LdyX6OaIWz0/LDseSvoAAA==",
+    "color": "rgb(8 8 8)",
+    "exif": {
+      "camera": "Sony α7 III",
+      "lens": "E 70-300mm F4.5-6.3 A047",
+      "focal": "74mm",
+      "aperture": "ƒ/22",
+      "shutter": "1/250",
+      "iso": "ISO 6400",
+      "year": 2026
+    }
+  },
+  "dsc01393": {
+    "slug": "dsc01393",
+    "source": "DSC01393.JPG",
+    "sourceBytes": 3451564,
+    "width": 4000,
+    "height": 6000,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2560
+    ],
+    "placeholder": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAAAwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JaACdDiMxyqyEZX2v4jCycgAA/t/d2/nvtnKRuNUGGKGs3t72ODWnxLh+Ubb793Heoo5ujTA6rgYAn5yR0rhHQpBVvYtaSJeR0q3hce773THTgoObwXqHMVycYhRZups6zwPcIYf4aD9URGmYmah3Gw3ex9wGb/Bu7hUHhfdHGY1RPEgmwD3hw3lO+2YXbNuRGwGtnx9of2PezfgpLQKgsSkTSvMAAAA=",
+    "color": "rgb(232 232 232)",
+    "exif": {
+      "camera": "Sony α7 III",
+      "lens": "E 70-300mm F4.5-6.3 A047",
+      "focal": "123mm",
+      "aperture": "ƒ/18",
+      "shutter": "1/640",
+      "iso": "ISO 6400",
+      "year": 2026
+    }
+  },
+  "dsc01656": {
+    "slug": "dsc01656",
+    "source": "DSC01656.JPG",
+    "sourceBytes": 2623001,
+    "width": 3951,
+    "height": 5268,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2560
+    ],
+    "placeholder": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAADQBQCdASoSABgAPu1ur1IppiQiqAgBMB2JQBOmax9FkAAN+t11to1RTsCFi6ejywd7XpJGHD5gAP7lBQQ1CyLeBxqExkcCdaK80+CIa9mFeBg3U2fE3ypoSriRMfwbTVaZNmw9C+fqRWs+2e+Qj3ClsV4FFys48+Z6dkxTylqfkrt91msdXS9I8VAR7lCSWwl0w31yWHBkicFmA8R84TmusjU36oPmDQpxOHIBymiUXAAA",
+    "color": "rgb(8 8 8)",
+    "exif": {
+      "camera": "Sony α7 III",
+      "lens": "E 70-300mm F4.5-6.3 A047",
+      "focal": "70mm",
+      "aperture": "ƒ/4.5",
+      "shutter": "1/400",
+      "iso": "ISO 5000",
+      "year": 2026
+    }
+  },
+  "dsc02356": {
+    "slug": "dsc02356",
+    "source": "DSC02356.JPG",
+    "sourceBytes": 752397,
+    "width": 5904,
+    "height": 3936,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2560
+    ],
+    "placeholder": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAADwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JaACdACHYOLhruvlgK3xSAP1N7CShVp0diOwlWPnyUoY3nNmrl0glQ4RD9HQzVD6kt8IMQLH5OQk11Enh1JyCXrGyFERfsdM4Y6uctd1yMtlGXa2Let68KRx12vIzhCDcGUSksSnt00z+5JWmSHINwL64sd8xZAjEsx62GuLBv01C7gAAAA==",
+    "color": "rgb(8 8 8)",
+    "exif": {
+      "camera": "Sony α7 III",
+      "lens": "E 70-300mm F4.5-6.3 A047",
+      "focal": "95mm",
+      "aperture": "ƒ/4.5",
+      "shutter": "1/400",
+      "iso": "ISO 50",
+      "year": 2026
+    }
+  },
+  "dsc02401": {
+    "slug": "dsc02401",
+    "source": "DSC02401.JPG",
+    "sourceBytes": 967995,
+    "width": 5444,
+    "height": 3062,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2560
+    ],
+    "placeholder": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAQBACdASoYAA0APu1kqU2ppaOiMAgBMB2JYwC7AB6WcboUyYWI7c4E0AD+1O/k1TyAsqu+24wKIxI5lDwNClULekUfHUniEqG4Hx6MJgh1aVyFlYeZ7cgbIuaD6QxK9RMPPtIcMI+Qk82dbWjSnyDrzm8PGMrYBJ5q9scJLv+NO/yZpcyAaKIAAAA=",
+    "color": "rgb(232 232 216)",
+    "exif": {
+      "camera": "Sony α7 III",
+      "lens": "E 70-300mm F4.5-6.3 A047",
+      "focal": "107mm",
+      "aperture": "ƒ/4.5",
+      "shutter": "1/640",
+      "iso": "ISO 100",
+      "year": 2026
+    }
+  },
+  "dsc03214": {
+    "slug": "dsc03214",
+    "source": "DSC03214.JPG",
+    "sourceBytes": 2375108,
+    "width": 6000,
+    "height": 4000,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2560
+    ],
+    "placeholder": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAABQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JbACdACFVCjIoc9KgNyq2QTwAAP7q7GW+Z+3JEwVAbTXqVJaXVA/Nvk2+OJe2Qzmg/836JU+mMxCFrWqVDLa42zsYw5ZR5/RxCGwOgFAM4IwLiH8/KxFoghDjLHXnqNXnMOd5k4fiBUAByhNV913EASxl//jtpXf/9ExqJVHf0zBbCSf9Viy//jSHPXLNJIihOCMacgAAAA==",
+    "color": "rgb(168 200 232)",
+    "exif": {
+      "camera": "Sony α7 III",
+      "lens": "E 70-300mm F4.5-6.3 A047",
+      "focal": "186mm",
+      "aperture": "ƒ/5.6",
+      "shutter": "1/1000",
+      "iso": "ISO 125",
+      "year": 2026
+    }
+  },
   "dsc03306": {
     "slug": "dsc03306",
     "source": "DSC03306.JPG",
@@ -323,6 +505,32 @@
       "aperture": "ƒ/5",
       "shutter": "1/250",
       "iso": "ISO 100",
+      "year": 2026
+    }
+  },
+  "dsc03645": {
+    "slug": "dsc03645",
+    "source": "DSC03645.jpg",
+    "sourceBytes": 3960936,
+    "width": 6000,
+    "height": 4000,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2560
+    ],
+    "placeholder": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JYgC06CKaSgC6EuhZDJWdQDUAAP7lCI3Z/cLXxNyKWvlOSGPHR18kZZpaCDA+tDXDcOsECIERrFB2oVO3Eg9zCl+9vLwJOCUQabRf5gdWNncLRHI/4XtzrF5jEPEI5BJK8CpQSwePQEHBkOoAAA==",
+    "color": "rgb(8 8 8)",
+    "exif": {
+      "camera": "Sony α7 III",
+      "lens": "FE 50mm F1.2 GM",
+      "focal": "50mm",
+      "aperture": "ƒ/2",
+      "shutter": "1/500",
+      "iso": "ISO 400",
       "year": 2026
     }
   },
@@ -557,6 +765,57 @@
       "shutter": "1/17",
       "iso": "ISO 640",
       "year": 2025
+    }
+  },
+  "img-9226": {
+    "slug": "img-9226",
+    "source": "IMG_9226.jpg",
+    "sourceBytes": 569770,
+    "width": 3077,
+    "height": 2308,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2560
+    ],
+    "placeholder": "data:image/webp;base64,UklGRu4AAABXRUJQVlA4IOIAAACQBQCdASoYABIAPu1ur1IppiQiqAgBMB2JQBfJMX1N3TIu4DkEMW4bDH3gp0MBz4ujGhJVAAD8x7xbghhIAnI9wo8/P+xJ7ZB85XjdSlN3K5CsJp0Ds6cjq/x1CWVsdhfYj8VUqRFVXqgKWbwz5CqfE4QSgIhzN40YxUHUF9HwhA8Ev58IDpUSONU3AuwHRfGoNUIgNYw6Ssec9AgmhqRcoZWHCgQMXw2JDKk7iMrRa2rcHUPsEkdTHkXqQFlV8mIpGpF7MZPtNcgfuKrstCMxEQ8c7+S7FG9hNv7X8yHAAAAA",
+    "color": "rgb(8 8 8)",
+    "exif": {
+      "camera": "Apple iPhone 14 Pro",
+      "lens": "9mm f/2.8",
+      "focal": "9mm",
+      "aperture": "ƒ/2.8",
+      "shutter": "1/470",
+      "iso": "ISO 32",
+      "year": 2026
+    }
+  },
+  "img-9229": {
+    "slug": "img-9229",
+    "source": "IMG_9229.jpg",
+    "sourceBytes": 356342,
+    "width": 1738,
+    "height": 2317,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1738
+    ],
+    "placeholder": "data:image/webp;base64,UklGRuQAAABXRUJQVlA4INgAAABQBQCdASoSABgAPu1grFAppSQisBgIATAdiWIAsQdRw8rw+oXZW12Ijj+fcK+UuWd5uQAAybIZHq0eDXstwVJ06HK6xasdHRD5/3Bx0i+ERi6O3zPFq1tm6GL3vilM4nTMvKGn8AEfmWDQ8OVMdWSEQrx4y9jIVqg7WOJ8kP4zNB1oYr0ZLC5qsdlPTx8lB7LAAVXSzmMzi6C5JIcT36q/mRIRvMf9r+brtOBmaxYYk0qiSixBl68jdX9N+SpXALJlsXoHgJ5mrdiwLfohWZudIALseNwAAAA=",
+    "color": "rgb(152 136 152)",
+    "exif": {
+      "camera": "Apple iPhone 14 Pro",
+      "lens": "9mm f/2.8",
+      "focal": "9mm",
+      "aperture": "ƒ/2.8",
+      "shutter": "1/370",
+      "iso": "ISO 32",
+      "year": 2026
     }
   },
   "img-9313": {

@@ -1,6 +1,7 @@
 import { useSearchParams } from 'react-router-dom'
 import Exhibition from '../components/Exhibition.jsx'
-import AlbumCard from '../components/AlbumCard.jsx'
+import Albums from '../components/Albums.jsx'
+import { site } from '../content/site.js'
 import Glass from '../components/Glass.jsx'
 import Seo from '../components/Seo.jsx'
 import { useLightbox } from '../components/Lightbox.jsx'
@@ -32,6 +33,11 @@ export default function Work() {
               {c.title}
             </button>
           ))}
+          {site.albums?.length > 0 && (
+            <a className="filter filter--link" href="#albums">
+              Albums <span aria-hidden="true">↓</span>
+            </a>
+          )}
         </Glass>
       </header>
 
@@ -51,7 +57,7 @@ export default function Work() {
         </section>
       ))}
 
-      <AlbumCard />
+      <Albums />
     </>
   )
 }
