@@ -33,8 +33,18 @@ export const site = {
     { url: 'https://adobe.ly/3UPW6io', title: 'VT vs ODU', meta: 'Game day', cover: 'img-9229' },
   ],
 
-  // OWNER: a public booking/contact email. When empty, the booking form
-  // hands the finished inquiry over to Instagram DMs instead.
+  // Where booking requests are delivered. The form posts to FormSubmit
+  // (formsubmit.co, free, no account), which emails the request here.
+  // The very first submission sends a one-time "Activate form" email to
+  // this address — click it once and every booking after that arrives.
+  // After activating, FormSubmit also gives you a random alias; paste it in
+  // place of the address in `endpoint` to keep the address out of the code.
+  booking: {
+    email: 'grant.erickson@outlook.com',
+    endpoint: 'https://formsubmit.co/ajax/grant.erickson@outlook.com',
+  },
+
+  // OWNER: a public contact email to list on the Contact page ('' hides it).
   contactEmail: '',
 }
 
