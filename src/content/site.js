@@ -26,12 +26,11 @@ export const site = {
   lightroomAlbumUrl: '',
 
   // Lightroom albums, shown in the Albums section of the Work page.
-  // OWNER: give each album its real title; `cover` is a slug from
-  // content/photos.js and `meta` is an optional small label.
+  // `cover` is a slug from content/photos.js; `meta` is an optional small label.
   albums: [
-    { url: 'https://adobe.ly/3VgRulm', title: 'Album 01', meta: '', cover: 'dsc03214' },
-    { url: 'https://adobe.ly/4iFu82O', title: 'Album 02', meta: '', cover: 'dsc01393' },
-    { url: 'https://adobe.ly/3UPW6io', title: 'Album 03', meta: '', cover: 'dsc02401' },
+    { url: 'https://adobe.ly/3VgRulm', title: 'VT vs VMI', meta: 'Game day', cover: 'dsc03214' },
+    { url: 'https://adobe.ly/4iFu82O', title: 'VT vs Maryland', meta: 'Game day', cover: 'dsc04402' },
+    { url: 'https://adobe.ly/3UPW6io', title: 'VT vs ODU', meta: 'Game day', cover: 'img-9229' },
   ],
 
   // OWNER: a public booking/contact email. When empty, the booking form
