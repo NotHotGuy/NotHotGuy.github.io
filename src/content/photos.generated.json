@@ -1,0 +1,474 @@
+{
+  "2026-01-09-14-27-20": {
+    "slug": "2026-01-09-14-27-20",
+    "source": "2026-01-09_14.27.20.png",
+    "sourceBytes": 4763985,
+    "width": 1920,
+    "height": 1200,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920
+    ],
+    "placeholder": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAwBACdASoYAA8APu1iqU2ppaOiMAgBMB2JZwC+SCKsJPRJZPsmJBG0msAA/tj1FQ7MZ1RclhrPbTRwUiEELllL5r2z9GgQRTtCexj1be8W8JqjprXUNoKZiEY7G2tyCJH86S7ztGprotPTBvUxpKcTm8WBoGeDvQVdIaP0eHsx0mgA",
+    "color": "rgb(56 56 56)",
+    "exif": null
+  },
+  "2026-07-22-20-08-56": {
+    "slug": "2026-07-22-20-08-56",
+    "source": "2026-07-22_20.08.56.jpg",
+    "sourceBytes": 5969141,
+    "width": 2400,
+    "height": 1800,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2400
+    ],
+    "placeholder": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwBACdASoYABIAPu1qrFEppaQiqAqpMB2JZACdMtP8qCURezP49a8rasuMgVMeHAAA/vHImnThuLJTObBhYKNG2yZ5B9U7rsG247d1BY5JSJp3Z6pIf8hzZMeQlETc4HBDdbAnKkDhIMThizGvVlZguXutCpvnz9qYSRj1X46uhiZoXFYnf23X28yuAAAA",
+    "color": "rgb(248 248 216)",
+    "exif": {
+      "camera": null,
+      "lens": null,
+      "focal": null,
+      "aperture": null,
+      "shutter": null,
+      "iso": null,
+      "year": 2026
+    }
+  },
+  "2026-07-22-20-09-57": {
+    "slug": "2026-07-22-20-09-57",
+    "source": "2026-07-22_20.09.57.jpg",
+    "sourceBytes": 2224642,
+    "width": 2400,
+    "height": 1800,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2400
+    ],
+    "placeholder": "data:image/webp;base64,UklGRtYAAABXRUJQVlA4IMoAAABwBQCdASoYABIAPu1qrlCppaQiqAqpMB2JbACxHuI20CUQ1B6M9NOylCIXreqxZeR5ygkMAP6xMliRYJB7or/MaY9HxBYkRa97lYCgVpaSOG+RjNm8EUWe3fEwCk9Zv5KsIPtTYBL35Q0V9/6v6nQq7NE1okAimi3MX1QsCnoDKQVyKlV1w6LnvKtsgdL6yjtjQPIpHRQO+22kV5+f7QZcIhnbjrINCJYhxSZaqlucZm5OBLCxQ4UEVUKdZb+DexU6y38G9czMAAAA",
+    "color": "rgb(232 216 232)",
+    "exif": {
+      "camera": null,
+      "lens": null,
+      "focal": null,
+      "aperture": null,
+      "shutter": null,
+      "iso": null,
+      "year": 2026
+    }
+  },
+  "2026-07-22-20-26-29": {
+    "slug": "2026-07-22-20-26-29",
+    "source": "2026-07-22_20.26.29.jpg",
+    "sourceBytes": 1391903,
+    "width": 2400,
+    "height": 1800,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2400
+    ],
+    "placeholder": "data:image/webp;base64,UklGRugAAABXRUJQVlA4INwAAACwBQCdASoYABIAPu1or1CppaQiqAqpMB2JQBb3MY7OGy3ZHj9bg2NYjR1e6KIFXpKRlu4be4AA/vHMvltLC9hK4fIZn6ZkHtdNPSJAw+z/lqSNtNNIWo3VfUbTSColjGk4dyntvfZkcGrgc3w6ST55moNZUI63iG2YcQyn0XBL4/vaGx4vMVp5hxGnZF3BcTZo26eq3T/N2JFd76Cf7s/Rn6Of2hG0L4t2X39noKvfsX9tH2diDgtAfqCF/YsnT8By2QvB3Xn4lQORP+3qu0B2ARMcxF2zkJ/J8AAA",
+    "color": "rgb(248 248 248)",
+    "exif": {
+      "camera": null,
+      "lens": null,
+      "focal": null,
+      "aperture": null,
+      "shutter": null,
+      "iso": null,
+      "year": 2026
+    }
+  },
+  "2026-07-22-20-34-55": {
+    "slug": "2026-07-22-20-34-55",
+    "source": "2026-07-22_20.34.55.jpg",
+    "sourceBytes": 5885450,
+    "width": 2400,
+    "height": 1800,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2400
+    ],
+    "placeholder": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABQBQCdASoYABIAPu1sq1EppaOiqAqpMB2JaACpIzwA6OJ72j1zCUZcM91Axfc+5wEJooAA/ucpb03WH12ijQQ3AO4DWiA0SrdH5h9SeODb8l7O9nmg7MtHi5XZ9iESS+Ug5pUekPl5P1kVICdBEEZd9E7uWdpsH6RoaFoPX039STFusp84N5Q+OXdPzNMjlKyUsje4AAA=",
+    "color": "rgb(248 248 200)",
+    "exif": {
+      "camera": null,
+      "lens": null,
+      "focal": null,
+      "aperture": null,
+      "shutter": null,
+      "iso": null,
+      "year": 2026
+    }
+  },
+  "2026-07-22-20-44-13": {
+    "slug": "2026-07-22-20-44-13",
+    "source": "2026-07-22_20.44.13.jpg",
+    "sourceBytes": 2395298,
+    "width": 2035,
+    "height": 1526,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2035
+    ],
+    "placeholder": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAACQBQCdASoYABIAPu1srFEppaQiqAqpMB2JaACdMs86CNAcq4crUAmiYn21uPpAaR0IGQ+iIAD8bY2WzlJlMtooqYLugSr5ABbixr7cI3ZFNhEoBGB6JgErUHqJRPoFptvto/f3ndgioyeQGbm+LMINzPUsSzBGWarOc/Yzcfo4pCk699QHSU7LbeDN4yW+wjiMAC7om3xDXF96JM8rySmnQ78mLzaS1bt2NR6nHhg2E0oYdPfdO9d+rhhOJ7c0wK+qXvQAAAA=",
+    "color": "rgb(152 168 184)",
+    "exif": {
+      "camera": null,
+      "lens": null,
+      "focal": null,
+      "aperture": null,
+      "shutter": null,
+      "iso": null,
+      "year": 2026
+    }
+  },
+  "2026-07-22-20-51-30": {
+    "slug": "2026-07-22-20-51-30",
+    "source": "2026-07-22_20.51.30.jpg",
+    "sourceBytes": 1044193,
+    "width": 2400,
+    "height": 1800,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2400
+    ],
+    "placeholder": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAADwBACdASoYABIAPu1mp02ppiOiMBgMATAdiWQAuzMvwX1cbm0zIhsMFbh7ILpwu+AA/LMgRH8SPHsEjrSKwWFw1+iE0R9FuLE8agm4b4o4cIECg54EE93KYnROXcVaiW4P4/A9HQugiWku8IKebe7maK8d3gLxc36kkPxOGAy301oEZGH7RmaP/g4tcJP7rNKco90DAgDoMqql3LWC3r8uIcn1mroM0AtgAAAA",
+    "color": "rgb(248 232 232)",
+    "exif": {
+      "camera": null,
+      "lens": null,
+      "focal": null,
+      "aperture": null,
+      "shutter": null,
+      "iso": null,
+      "year": 2026
+    }
+  },
+  "9b02ec2f-da32-4bcb-93b3-4ef716425f62": {
+    "slug": "9b02ec2f-da32-4bcb-93b3-4ef716425f62",
+    "source": "9B02EC2F-DA32-4BCB-93B3-4EF716425F62.jpeg",
+    "sourceBytes": 1612891,
+    "width": 2048,
+    "height": 2560,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2048
+    ],
+    "placeholder": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAAAwBQCdASoTABgAPu1wr1KppiQiqAgBMB2JaACxDSI+OAWVKIKwGBUyMr7qsPzLVfC6wAD+9DCKB2N0RcpnGi15jGkqb3vemEKVQdeaTPT5zn9DsnMDlJc4uRFZA/VxuLOZ9Fsos0elmYls2cNIkBIKUz/CVcjPniGsQHaidkWmQX23eEUKOXl+IuBd70HBObeTtMiGkBNMyiEoNhLdK3IAAAA=",
+    "color": "rgb(8 8 8)",
+    "exif": {
+      "camera": null,
+      "lens": null,
+      "focal": null,
+      "aperture": null,
+      "shutter": null,
+      "iso": null,
+      "year": 2025
+    }
+  },
+  "9b02ec2f-da32-4bcb-93b3-4ef716425f62-2": {
+    "slug": "9b02ec2f-da32-4bcb-93b3-4ef716425f62-2",
+    "source": "9B02EC2F-DA32-4BCB-93B3-4EF716425F62-2.jpeg",
+    "sourceBytes": 1314179,
+    "width": 2047,
+    "height": 1686,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2047
+    ],
+    "placeholder": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAwBQCdASoYABQAPu1orE+ppiQiMBgIATAdiWoAuwAMFzy516oYdm8gQBwqSsSh7DHjAAD+qZUCabDeqEwBUbgHP4jluqEoeQG5BVEsXZiA8WD6aBgVGsu+xpyWsmq7y4GLb6pgHi0oXMVnPbEjGi/Nf0kbFGHAsqFn7NuhRt0aeI6rcfp1YdPMKgtPQCw8AAA=",
+    "color": "rgb(152 104 88)",
+    "exif": {
+      "camera": null,
+      "lens": null,
+      "focal": null,
+      "aperture": null,
+      "shutter": null,
+      "iso": null,
+      "year": 2025
+    }
+  },
+  "dsc00314": {
+    "slug": "dsc00314",
+    "source": "DSC00314.jpg",
+    "sourceBytes": 2091456,
+    "width": 1329,
+    "height": 1661,
+    "widths": [
+      640,
+      960,
+      1280,
+      1329
+    ],
+    "placeholder": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAwCdASoTABgAPt1apE2opSOiN/qoARAbiWUAAFuzh/aw3EQRX+IAAP71bXCwscsTTG0EapeSfb5edVVxpQ2WoiRAv5yJI+oqAsA1GtY6vrScrtz/DLrbGr59gAAA",
+    "color": "rgb(8 8 8)",
+    "exif": {
+      "camera": "Sony α7 III",
+      "lens": "E 70-300mm F4.5-6.3 A047",
+      "focal": "300mm",
+      "aperture": "ƒ/6.3",
+      "shutter": "1/15",
+      "iso": "ISO 12800",
+      "year": 2025
+    }
+  },
+  "dsc03306": {
+    "slug": "dsc03306",
+    "source": "DSC03306.JPG",
+    "sourceBytes": 1023923,
+    "width": 6000,
+    "height": 3141,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2560
+    ],
+    "placeholder": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAAAwBACdASoYAA0APu1iqU2ppaOiMAgBMB2JYgCw7BE5jbbNKUCCs1lMGwAA/ut4jrm0xIiRBQ3gN+Fs1sjpD6u5P7l7DBwtlGUFyJiLqVMkm4cFknoF+2kDG1bV6klma/49wnGcFnPpXX1sH6fEDEZRPmDft1gaP4/lYEC2SUoKZHgvhOXXl/9M3v4QOw+WbLqp95FDEZRpI9smOrMKO9Gbk7UsMPX42L2bHxNyE84mxh5pwWp5CZtBJIeAAAAA",
+    "color": "rgb(248 248 248)",
+    "exif": {
+      "camera": "Sony α7 III",
+      "lens": "E 70-300mm F4.5-6.3 A047",
+      "focal": "102mm",
+      "aperture": "ƒ/5",
+      "shutter": "1/250",
+      "iso": "ISO 100",
+      "year": 2026
+    }
+  },
+  "dsc03314": {
+    "slug": "dsc03314",
+    "source": "DSC03314.JPG",
+    "sourceBytes": 5275699,
+    "width": 6000,
+    "height": 4000,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2560
+    ],
+    "placeholder": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAACwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JYwC+SywYYJnEX5quXSv9mtoqu/fAAP7oUD20ci3OUFKKS9sWzoGmmylwTL6O3EaOi8bmq/2MessryhbZVs4kB1EFFN1/8Domv2TrlfHMByKK1LzmGSKayBdGkBOzzC0yVslC/P/1Jp5zbJNIODNzykxA2o8YfnBJgLSyDCUOkHR8OT2r+sEnUmAnQWVp3XxKT01DpQlDlrfmRmd+hjchlYpd+wAA",
+    "color": "rgb(8 8 8)",
+    "exif": {
+      "camera": "Sony α7 III",
+      "lens": "E 70-300mm F4.5-6.3 A047",
+      "focal": "70mm",
+      "aperture": "ƒ/5",
+      "shutter": "1/250",
+      "iso": "ISO 100",
+      "year": 2026
+    }
+  },
+  "dsc03793": {
+    "slug": "dsc03793",
+    "source": "DSC03793.jpg",
+    "sourceBytes": 5277688,
+    "width": 6000,
+    "height": 4000,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2560
+    ],
+    "placeholder": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JbACdLwABu/QiZ1iuFFtrAAD+lqlK5CVqMHo23hnfeVlgieC691LpRR1ZSbVRIumSY0U6TM1I4nSa5Fej4jFyY564INwprpIL6UqMeIqQVPnvIOWgRnQbS281jGhAAAA=",
+    "color": "rgb(8 8 8)",
+    "exif": {
+      "camera": "Sony α7 III",
+      "lens": "FE 50mm F1.2 GM",
+      "focal": "50mm",
+      "aperture": "ƒ/3.2",
+      "shutter": "1/125",
+      "iso": "ISO 25600",
+      "year": 2026
+    }
+  },
+  "dsc04265": {
+    "slug": "dsc04265",
+    "source": "DSC04265.jpg",
+    "sourceBytes": 5340828,
+    "width": 1760,
+    "height": 2640,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1760
+    ],
+    "placeholder": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAABQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JaAC7AYu4ugITzPlyF7UBJ5QEAM3QwDRHewamG5Yn8SzE48tdWv0YY/V4Eo3ZbH8hYWoyOIUhTytAJD76ACn2U/GPQJZ5mgMkXxk17z9Etvgmn1I5ZjlE1Y/ApL34jaZ/duCa3Aqq8nyodwqepz7/Bd9ULmU5dKdqnIQ3my2gXrWbKPVjDTj3icz77oAKHTqQmYAA",
+    "color": "rgb(8 8 8)",
+    "exif": {
+      "camera": "Sony α7 III",
+      "lens": "FE 50mm F1.2 GM",
+      "focal": "50mm",
+      "aperture": "ƒ/1.8",
+      "shutter": "1/250",
+      "iso": "ISO 320",
+      "year": 2026
+    }
+  },
+  "dsc04324": {
+    "slug": "dsc04324",
+    "source": "DSC04324.jpg",
+    "sourceBytes": 3170048,
+    "width": 5833,
+    "height": 3889,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2560
+    ],
+    "placeholder": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4IM4AAABwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JagC7OUANEEzYJvhON93F3Svt8AD+0P7Z/4kH3hE109jQlp/nuZpWflpYjd3kru+aXbL0Qw1QLQG+QqrTfrwQo1wS6YQj9gebUy7Fhntpt2GTFwPIDGDgCK15i8fCW0H5x2HuEgdt5FuWBEEwqIwLixiJvK9ArMDS89HHDFw0nTZOslqiwPEFyG6hrDtrzykMeFn6n5ic2lBfypnYRgYOeff1OTFDTGGvODsfXX3sZXnqp1v4AA==",
+    "color": "rgb(8 8 8)",
+    "exif": {
+      "camera": "Sony α7 III",
+      "lens": "FE 50mm F1.2 GM",
+      "focal": "50mm",
+      "aperture": "ƒ/1.8",
+      "shutter": "1/250",
+      "iso": "ISO 320",
+      "year": 2026
+    }
+  },
+  "img-1370": {
+    "slug": "img-1370",
+    "source": "IMG_1370.jpg",
+    "sourceBytes": 3496924,
+    "width": 1959,
+    "height": 3482,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      1959
+    ],
+    "placeholder": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABQAwCdASoNABgALrV2u12jqampiYC0S2AABc6LpTWfGhBqAAD++RSJng4TLKfZ4ByKVxDvLMmJObCs5MgnkXAyivq3AFNiVEv5GgAA",
+    "color": "rgb(8 8 8)",
+    "exif": {
+      "camera": "Apple iPhone 14 Pro",
+      "lens": "6.86mm f/1.78",
+      "focal": "7mm",
+      "aperture": "ƒ/1.8",
+      "shutter": "1/30",
+      "iso": "ISO 800",
+      "year": 2025
+    }
+  },
+  "img-1755": {
+    "slug": "img-1755",
+    "source": "IMG_1755.HEIC",
+    "sourceBytes": 796379,
+    "width": 3024,
+    "height": 4032,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2560
+    ],
+    "placeholder": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAADQBACdASoSABgAPu1sq1EppaOiqAqpMB2JQBfnAKM6cY6YPDCkw8mjC2u3sExTgADN5iTdhNg0JWI9RS8PqNSjGd/exbXIwBIiiFp4pR+QF2W/rZqWS9P0J9SjxFxukvsldKnrEGkLVc6wrf43/QqoMVSWmNBjMJiMtcjIk30Rwdgrwn28+bQE2e3E9FReK9h8pZnPSoGKymhp8CywAAAA",
+    "color": "rgb(88 120 152)",
+    "exif": {
+      "camera": "Apple iPhone 14 Pro",
+      "lens": "6.86mm f/1.78",
+      "focal": "7mm",
+      "aperture": "ƒ/1.8",
+      "shutter": "1/6211",
+      "iso": "ISO 100",
+      "year": 2025
+    }
+  },
+  "img-5488": {
+    "slug": "img-5488",
+    "source": "IMG_5488.HEIC",
+    "sourceBytes": 1566601,
+    "width": 3024,
+    "height": 4032,
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920,
+      2560
+    ],
+    "placeholder": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAACQBACdASoSABgAPu1qrlCppaQiqAqpMB2JYgCw7BCAumSXE7W3mmtgE/q2ZkAA/gk6v5ZEGayiq+S7H7AqqgtwZdObUb4j16SkxLprvBRAZsams/Vx2W+iUAZ18DnZandIcLhBBkhpeVTCPkZXLSzNU5WnuysWv8ogwmtbFM0exyEiaf+XLvcxivHAhsA4uZ1LB5f5zKdN5mrDstO8oZgBJFOEQNfCbv8n4Fd0XwWhKdZ54BBDMAAA",
+    "color": "rgb(216 232 232)",
+    "exif": {
+      "camera": "Apple iPhone 14 Pro",
+      "lens": "6.86mm f/1.78",
+      "focal": "7mm",
+      "aperture": "ƒ/1.8",
+      "shutter": "1/1395",
+      "iso": "ISO 80",
+      "year": 2025
+    }
+  },
+  "img-9313": {
+    "slug": "img-9313",
+    "source": "IMG_9313.PNG",
+    "sourceBytes": 3652801,
+    "width": 1365,
+    "height": 2048,
+    "widths": [
+      640,
+      960,
+      1280,
+      1365
+    ],
+    "placeholder": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAADwAwCdASoQABgAPu1iqU2ppaOiMAgBMB2JbAC06BTmzRzmo43pbacAAP7kHCJueLwX74wyNAF6sLl43jCFrCVods4k2JBEUOWnvAuiG1QLi8u6HzM/9jbd09Z7eA/UzFF9GgGmHDFoJVp59dhV4k4fb07Fc66X7n2246hOdFnAzEJtSxMGOdABIAA=",
+    "color": "rgb(8 8 8)",
+    "exif": null
+  }
+}

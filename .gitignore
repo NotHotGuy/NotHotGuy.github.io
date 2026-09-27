@@ -1,0 +1,7 @@
+node_modules
+dist
+.DS_Store
+# Master photographs stay on the owner's machine (and in Google Drive).
+# Only the optimized derivatives in public/photos are committed.
+photos/originals/*
+!photos/originals/README.md

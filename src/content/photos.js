@@ -1,0 +1,114 @@
+/**
+ * Photo curation — the one file to edit when changing which photographs appear
+ * where. Components never hard-code photos.
+ *
+ * Each photo is referenced by its slug: the master's file name, lower-cased,
+ * with anything that isn't a letter or digit turned into "-".
+ *   photos/originals/DSC03793.jpg  →  'dsc03793'
+ *
+ * Dimensions, responsive widths and camera settings come from
+ * photos.generated.json, written by `npm run optimize-images`.
+ *
+ *   alt    what is in the frame, for screen readers (describe, don't interpret)
+ *   focus  "x% y%" — the point that must survive any crop (object-position)
+ *   tone   'dark' | 'light' — whether overlaid UI needs to sit on light pixels
+ */
+export const photoInfo = {
+  // — Game day —
+  dsc04324: { alt: 'Trombones raised in a packed stadium section, orange pom-poms blurred in the foreground', focus: '38% 55%' },
+  dsc03314: { alt: 'A marching band member in a VT shako shouting mid-cheer, bandmates behind', focus: '40% 45%' },
+  dsc03306: { alt: 'A smiling clarinetist in mirrored sunglasses makes a heart with both hands among the band', focus: '57% 52%' },
+  dsc04265: { alt: 'Rows of band members in maroon and white, instruments at rest, seen from within the stands', focus: '50% 50%' },
+
+  // — Night & light —
+  dsc03793: { alt: 'A photographer lit from the front by a bright beam, camera raised, against a deep blue night', focus: '64% 48%', tone: 'dark' },
+  dsc00314: { alt: 'Extreme close-up of a single eye catching two points of blue light in darkness', focus: '62% 70%', tone: 'dark' },
+  'img-1370': { alt: 'Violet lightning forking across a black sky', focus: '55% 65%', tone: 'dark' },
+
+  // — Field notes —
+  'img-1755': { alt: 'A tall glass spire rising from a sweeping museum roof under a bright cloudy sky', focus: '50% 55%' },
+  'img-5488': { alt: 'A long-haired sable-and-white dog with snow on its face, looking up', focus: '55% 38%' },
+
+  // — Experiments —
+  '9b02ec2f-da32-4bcb-93b3-4ef716425f62': { alt: 'Two stacked frames of a coastline: a lone figure against a low sun, and sea stacks under a pink sky', focus: '50% 70%' },
+  '9b02ec2f-da32-4bcb-93b3-4ef716425f62-2': { alt: 'Sea stacks and a glowing sun over a pink-toned ocean at dusk', focus: '55% 45%' },
+  'img-9313': { alt: 'A pink flower rendered as a stained-glass mosaic', focus: '50% 50%' },
+
+  // — Built worlds (in-game photography) —
+  '2026-07-22-20-51-30': { alt: 'A floating island crowned with a columned temple, drifting in a pale sky', focus: '45% 55%', tone: 'light' },
+  '2026-07-22-20-08-56': { alt: 'A block-built castle silhouetted in hazy golden light', focus: '50% 45%', tone: 'light' },
+  '2026-07-22-20-34-55': { alt: 'A giant block-built tree glowing against a low sun over a forest', focus: '52% 40%', tone: 'light' },
+  '2026-07-22-20-26-29': { alt: 'Desert rails and a scaffolded tower fading into bright haze', focus: '60% 50%', tone: 'light' },
+  '2026-07-22-20-44-13': { alt: 'A small stone chapel in a hollow surrounded by pink blossom trees', focus: '50% 55%' },
+  '2026-07-22-20-09-57': { alt: 'A hillside village with a rainbow-striped tower beside a river', focus: '55% 50%', tone: 'light' },
+  '2026-01-09-14-27-20': { alt: 'A stone castle wall climbing toward a lit spire, seen from below', focus: '55% 40%' },
+}
+
+/**
+ * Collections, in the order they appear on the Work page.
+ * `meta` is the small editorial label — only use facts you can stand behind.
+ */
+export const collections = [
+  {
+    id: 'game-day',
+    title: 'Game Day',
+    meta: 'Virginia Tech',
+    photos: ['dsc04324', 'dsc03314', 'dsc04265', 'dsc03306'],
+  },
+  {
+    id: 'night-and-light',
+    title: 'Night & Light',
+    meta: 'Portrait / Weather',
+    photos: ['dsc03793', 'dsc00314', 'img-1370'],
+  },
+  {
+    id: 'field-notes',
+    title: 'Field Notes',
+    meta: 'Places / Companions',
+    photos: ['img-1755', 'img-5488'],
+  },
+  {
+    id: 'experiments',
+    title: 'Experiments',
+    meta: 'Edits / Composites',
+    photos: ['9b02ec2f-da32-4bcb-93b3-4ef716425f62-2', 'img-9313', '9b02ec2f-da32-4bcb-93b3-4ef716425f62'],
+  },
+  {
+    id: 'built-worlds',
+    title: 'Built Worlds',
+    meta: 'In-game photography',
+    photos: [
+      '2026-07-22-20-51-30',
+      '2026-07-22-20-34-55',
+      '2026-07-22-20-08-56',
+      '2026-07-22-20-44-13',
+      '2026-07-22-20-26-29',
+      '2026-07-22-20-09-57',
+      '2026-01-09-14-27-20',
+    ],
+  },
+]
+
+/** Homepage art direction. Each row is a deliberate composition. */
+export const home = {
+  hero: 'dsc03793',
+
+  // Rows of the "Selected work" exhibition. Layouts:
+  //   pair     large image + smaller offset image   { photos: [large, small], flip? }
+  //   single   one image, narrow and off-centre      { photo, side: 'left'|'right', note? }
+  //   bleed    full-bleed — only for masters ≥ 2560px wide
+  //   triptych three images sharing one height
+  exhibition: [
+    { layout: 'pair', photos: ['dsc04324', 'dsc04265'] },
+    { layout: 'single', photo: 'dsc00314', side: 'right', note: 'Close enough to see the light arrive.' },
+    { layout: 'bleed', photo: 'dsc03306' },
+    { layout: 'triptych', photos: ['img-1755', 'img-5488', 'img-1370'] },
+    { layout: 'pair', photos: ['2026-07-22-20-51-30', 'dsc03314'], flip: true },
+  ],
+
+  // Contact-sheet strip that leads to Instagram.
+  social: ['2026-07-22-20-34-55', 'dsc03314', '9b02ec2f-da32-4bcb-93b3-4ef716425f62-2', 'img-5488', '2026-07-22-20-44-13', 'dsc04265'],
+
+  // Background of the Lightroom album card.
+  album: 'dsc04324',
+}
