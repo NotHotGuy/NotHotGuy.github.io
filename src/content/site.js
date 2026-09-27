@@ -6,7 +6,7 @@
  */
 export const site = {
   name: 'FocusedAntics',
-  url: 'https://nothotguy.github.io',
+  url: 'https://focusedantics.github.io',
 
   // Hero positioning statement — keep it to one short line.
   statement: 'Photographs made at the edge of the light.',
